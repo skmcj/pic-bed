@@ -1,0 +1,81 @@
+﻿
+<!-- 这是 PCL2 的主页自定义文件。你可以通过修改这个文件来自定义 PCL2 主页：添加文本、打开网页、启动游戏，等等。
+     如果你倒腾这个文件把 PCL2 玩炸了，把这个文件直接删除就行了。
+     如果你懂得 WPF 的布局文件编写，你甚至可以做出不少的新玩意儿…… -->
+    
+<local:MyCard Title="本服公告">
+    <StackPanel Margin="25,40,23,15">
+        <TextBlock TextWrapping="Wrap" Foreground="#427371"  Margin="0,3,0,3"
+                   Text="本服主要服务于小范围、朋友间、喜爱宝可梦IP、热爱玩Minecraft的对象。由于是第一次开服，没什么经验，很多功能并不完善，如果在游玩过程中有什么意见，可以以告示牌的形式，在服主家门前粘贴提议。" />
+        <TextBlock TextWrapping="Wrap" Foreground="#f52443"  Margin="0,3,0,3"
+                   Text="本服对待文明人极度自由，一般情况下，只要你不故意损毁他人财物、炸服，就不会被拉黑。" />
+        <TextBlock TextWrapping="Wrap" Foreground="#7d7d00"  Margin="0,3,0,3"
+                   Text="由于服务器租赁期限只有一年，本服大概率也只会存在一年，一年后即关服。如果有想要地图备份的，请在关服前联系服主。" />
+        <TextBlock TextWrapping="Wrap" Foreground="#7d7d00"  Margin="0,3,0,3"
+                   Text="最后，如果关于本服，有什么问题实在解决不了的话，可以联系服主，如果你联系的到的话。" />
+        <local:MyHint Margin="0,8,0,2" IsWarn="False"
+                   Text="服主账户名——black_flame0" />
+    </StackPanel>
+</local:MyCard>
+
+<local:MyCard Title="宝可梦图鉴" Margin="0,15,0,15">
+    <StackPanel Margin="25,40,23,15">
+        <TextBlock TextWrapping="Wrap"
+                   Text="点击下列按钮，可以打开宝可梦图鉴。通过输入宝可梦名称或ID，查看对于宝可梦的信息。" />
+        <local:MyButton Margin="0,8,0,10" Width="250" Height="35" ColorType="Highlight"
+                   Text="宝可梦图鉴" EventType="打开网页" EventData="https://cn.portal-pokemon.com/play/pokedex" ToolTip="点击打开宝可梦图鉴！" />
+        <TextBlock TextWrapping="Wrap"
+                   Text="点击下列按钮，可打开宝可梦MOD信息网。网站包含MOD的所有宝可梦信息，通过点击对应宝可梦名称，可查看详细数值信息，包括刷新点、技能等信息。" />
+        <local:MyButton Margin="0,8,0,10" Width="250" Height="35" ColorType="Red"
+                   Text="Available Pokémon" EventType="打开网页" EventData="https://pixelmonmod.com/wiki/Available_Pok%C3%A9mon" ToolTip="点击查看宝可梦信息！" />
+    </StackPanel>
+</local:MyCard>
+    
+<local:MyCard Title="小白接收" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
+    <StackPanel Margin="25,40,23,15">
+        <local:MyHint Margin="0,8,0,2" IsWarn="False"
+                   Text="点击右侧启动游戏按钮即可启动游戏，进入游戏后，点击多人游戏，选择第一个服务器进入。" />
+        <local:MyHint Margin="0,8,0,2" IsWarn="False"
+                   Text="Minecraft-Java版需要Java8环境支持，请确保你的电脑有此环境。" />
+    </StackPanel>
+</local:MyCard>
+    
+<local:MyCard Title="皮肤更换" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
+    <StackPanel Margin="25,40,23,15">
+        <TextBlock Margin="0,0,0,5" TextWrapping="Wrap"
+                   Text="正版账户不用做过多设置。" />
+        <TextBlock Margin="0,0,0,5" TextWrapping="Wrap"
+                   Text="离线用户如想使用皮肤，可将自己的皮肤文件放于.minecraft/versions/1.12.2/CustomSkinLoader/LocalSkin/skins文件夹内，文件命名为当前使用账户名.png。" />
+        <TextBlock Margin="0,0,0,5" TextWrapping="Wrap"
+                   Text="离线用户还可通过以下任意网站，为自己的角色添加皮肤，具体添加方法，不懂自行百度吧。" />
+        <local:MyButton Margin="0,5,0,5" Width="250" Height="35"
+                 Text="BlessingSkin"  EventType="打开网页" EventData="http://skin.prinzeugen.net/" />
+        <local:MyButton Margin="0,5,0,5" Width="250" Height="35"
+                 Text="SkinMe"  EventType="打开网页" EventData="http://www.skinme.cc/uniskin/" />
+        <local:MyButton Margin="0,5,0,5" Width="250" Height="35"
+                 Text="LittleSkin"  EventType="打开网页" EventData="https://littlesk.in/csl/" />
+        <TextBlock Margin="0,0,0,5" TextWrapping="Wrap"
+                   Text="本服使用的皮肤补丁是CustomSkinLoader，如果看完以上教程还不明白的，可以自行上网搜索该mod的相关教程。" />
+        <TextBlock Margin="0,0,0,5" TextWrapping="Wrap" Foreground="#f52443"
+                   Text="如果所有方法都尝试过，依旧无法解决的话，请联系服主，然后把自己准备好的皮肤文件上传到以下图床，然后把图床链接发给服主，让服主帮你改皮肤。如果不会上传到图床，那就把皮肤文件直接传给服主。" />
+        <local:MyButton Margin="0,5,0,5" Width="250" Height="35"
+                 Text="ImgURL"  EventType="打开网页" EventData="https://imgurl.org/" />
+    </StackPanel>
+</local:MyCard>
+
+<local:MyCard Title="服务器连接问题" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
+    <StackPanel Margin="25,40,23,15">
+        <TextBlock Margin="0,0,0,5" TextWrapping="Wrap"
+                   Text="如果服务器一直显示检测中，一般只需断网重连就行。如果还不行，就重新启动一下，再断网重连。" />
+        <TextBlock Margin="0,0,0,5" TextWrapping="Wrap"
+                   Text="如果服务器显示找不到，有红色字体显示，可能是你网络断开或服务器在停服修整。如果是后者，换个时间段游玩即可。" />
+    </StackPanel>
+</local:MyCard>
+
+<local:MyCard Title="更多问题" Margin="0,0,0,15" CanSwap="True" IsSwaped="True">
+    <StackPanel Margin="25,40,23,15">
+        <local:MyListItem Margin="-5,15,-5,0" 
+		                  Logo="https://www.baidu.com/favicon.ico" Title="百度" Info="百度一下，你就知道！" 
+		                  EventType="打开网页" EventData="https://www.baidu.com/" Type="Clickable" />
+    </StackPanel>
+</local:MyCard>
